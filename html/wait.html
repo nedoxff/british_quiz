@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/text.css">
+
+  <script src="../js/anime.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bgm.js"></script>
+  <script src="../js/utils.js"></script>
+
+
+  <style>
+    body {
+      background-color: #868686;
+    }
+
+    #content
+    {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .wavy
+    {
+      -webkit-text-stroke: 2px black;
+    }
+    
+    #button-container
+    {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+  </style>
+
+  <script>
+    $(() => {
+    });
+  </script>
+  <title></title>
+</head>
+<body fadein>
+<div id="button-container">
+  <button onclick="fadeAndRedirect('nomination.html')">Results are ready</button>
+  <button onclick="fadeOutBgm(1000)">Fade out music</button>
+</div>
+<div id="content">
+  <span class="wavy">W</span>
+  <span class="wavy">a</span>
+  <span class="wavy">i</span>
+  <span class="wavy">t</span>
+  <span class="wavy">i</span>
+  <span class="wavy">n</span>
+  <span class="wavy">g</span>
+  <span class="wavy">.</span>
+  <span class="wavy">.</span>
+  <span class="wavy">.</span>
+</div>
+<div id="bg"></div>
+</body>
+</html>

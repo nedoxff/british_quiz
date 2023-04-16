@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/text.css">
+  
+  <script src="../../js/anime.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/components/audioVisualizer.js"></script>
+  <script src="../../js/components/pauseButton.js"></script>
+  <script src="../../js/utils.js"></script>
+  <script src="../../js/components/questionSwitcher.js"></script>
+  <script src="../../js/components/pressScreen.js"></script>
+
+  <style>
+    body {
+      background-color: #b9c0ea;
+    }
+
+    #visualizer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    #character {
+      max-width: 30vw;
+      max-height: 75vh;
+      border-radius: 30px;
+    }
+
+    #timer {
+      margin: 0;
+      font-size: 4vw;
+      font-weight: bold;
+      color: white;
+      -webkit-text-stroke: 2px black;
+    }
+    
+    #vinyl-container
+    {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 50vh;
+      display: block;
+    }
+    
+    #vinyl
+    {
+      max-height: 50vh;
+    }
+    
+    #subtext
+    {
+      
+    }
+  </style>
+
+  <script>
+    $(() => {
+      pauseButton.onPause = () => {
+        visualizer.pause();
+      };
+      
+      pauseButton.onUnpause = () => {
+        visualizer.resume();
+      };
+      
+      $("body").on("roundStart", () => visualizer.play());
+    });
+  </script>
+  <title></title>
+</head>
+<body fadein>
+<canvas id="visualizer"></canvas>
+<div id="content">
+  <h1 class="headline title">What is the name of the song?</h1>
+  <div id="vinyl-container">
+    <img id="vinyl" src="../../assets/img/vinyl.png" alt="">
+  </div>
+</div>
+<audio id="audio" hidden="hidden"></audio>
+<div id="bg"></div>
+</body>
+</html>

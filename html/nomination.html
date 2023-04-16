@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/text.css">
+
+  <script src="../js/party.js"></script>
+  <script src="../js/anime.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bgm.js"></script>
+  <script src="../js/utils.js"></script>
+
+
+  <style>
+    body {
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #content
+    {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+  </style>
+
+  <script>
+    $(() => {
+      const bgm = $("#bgm")[0];
+      bgm.src = `../assets/bgm/award.mp3`;
+      bgm.loop = true;
+    });
+    
+    party.settings.gravity = 500;
+    setInterval(() => {
+      party.confetti(party.Rect.fromScreen(), {
+        count: party.variation.range(20, 60),
+        shapes: ["square", "circle"]
+      });
+    }, 250);
+  </script>
+  <title></title>
+</head>
+<body fadein>
+<div id="content">
+  <img src="../assets/gallery/start/0.png">
+</div>
+</body>
+</html>
