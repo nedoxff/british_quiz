@@ -29,7 +29,7 @@ class AudioVisualizer {
                 complete: () => {
                     index++;
                     if(index === AMOUNT + 1)
-                        fadeAndRedirect(`../gallery.html?id=characterTutorial&count=1&redirect=${encodeURI("tours/character.html")}`);
+                        fadeAndRedirect(`../gallery.html?id=characterTutorial`);
                     else
                         this.play();
                 }

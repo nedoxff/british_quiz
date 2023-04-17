@@ -13,7 +13,7 @@
   <script>
     $(() => {
       $("#confirm").click(() => {
-        fadeAndRedirect(`gallery.html?id=start&count=1&redirect=${encodeURI("tours/film.html")}`, 1000);
+        fadeAndRedirect(`gallery.html?id=start`, 1000);
       });
     });
   </script>
@@ -47,8 +47,17 @@
       margin-top: 0;
       margin-bottom: 5px;
       max-width: 25vw;
+    }
+    
+    #build, p
+    {
       font-family: Poppins, serif;
       color: white;
+    }
+    
+    #build
+    {
+      margin: 5px;
     }
   </style>
 </head>
@@ -57,6 +66,7 @@
   <h1>WARNING</h1>
   <p>This website is intended to be used by a host. Unfortunately, I cannot provide instructions nor tutorials on how to use this. You are on your own.<br>Do you wish to continue?</p>
   <button id="confirm">I know what I'm doing</button>
+  <h3 id="build">build no. 2 (18042023)</h3>
 </div>
 </body>
 </html>

@@ -41,7 +41,7 @@ class IdiomController
             timer.object.innerText = "00:30";
             index++;
             if(index === AMOUNT + 1)
-                fadeAndRedirect(`../gallery.html?id=musicTutorial&count=1&redirect=${encodeURI("tours/music.html")}`);
+                fadeAndRedirect(`../gallery.html?id=musicTutorial`);
             else
                 this.#image.src = `../../assets/idioms/${index}.jpg`;
         }, () => {

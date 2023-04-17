@@ -1,10 +1,29 @@
 ﻿let id, redirect, count, slide = 0;
 
+const length = {
+    "start": 5,
+    "musicTutorial": 3,
+    "movieTutorial": 3,
+    "idiomsTutorial": 4,
+    "characterTutorial": 3,
+    "blitzTutorial": 2
+};
+
+const redirects = {
+    "start": "gallery.html?id=movieTutorial",
+    "musicTutorial": "tours/music.html",
+    "movieTutorial": "tours/film.html",
+    "idiomsTutorial": "tours/idiom.html",
+    "characterTutorial": "tours/character.html",
+    "blitzTutorial": "tours/blitz.html"
+};
+
+
 $(() => {
     const query = new URLSearchParams(window.location.search);
     id = query.get("id");
-    redirect = query.get("redirect");
-    count = parseInt(query.get("count"));
+    redirect = redirects[id];
+    count = length[id];
 
     $("#image").attr("src", `../assets/gallery/${id}/${0}.png`);
     $("#previous").attr("disabled", "disabled");

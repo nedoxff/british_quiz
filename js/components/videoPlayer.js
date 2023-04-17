@@ -43,7 +43,7 @@ class VideoPlayer {
             timer.object.innerText = "00:05";
             questionIndex++;
             if (questionIndex === videoCount + 1)
-                fadeAndRedirect(`../gallery.html?id=idiomsTutorial&count=1&redirect=${encodeURI("tours/idiom.html")}`);
+                fadeAndRedirect(`../gallery.html?id=idiomsTutorial`);
             else
                 this.player.src = `../../assets/videos/${questionIndex}.mp4`;
         }, () => {

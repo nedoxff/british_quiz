@@ -9,7 +9,7 @@ const next = () => {
         timer.object.innerText = "00:15";
         index++;
         if (index === AMOUNT + 1)
-            fadeAndRedirect(`../gallery.html?id=blitzTutorial&count=1&redirect=${encodeURI("tours/blitz.html")}`);
+            fadeAndRedirect(`../gallery.html?id=blitzTutorial`);
         else
             image.src = `../../assets/character/${index}.jpg`;
     }, () => {
